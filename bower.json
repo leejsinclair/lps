@@ -5,6 +5,7 @@
     "tasks/replacements.js"
   ],
   "dependencies": {
-    "bootstrap": "~3.0.3"
+    "bootstrap": "~3.0.3",
+    "RRSSB": "~1.6.0"
   }
 }

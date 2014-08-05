@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 
   var pretty = require('pretty');
   var vendor = grunt.file.readJSON('.bowerrc').directory;
-  if(!grunt.file.exists(vendor + '/bootstrap/_config.yml')) {
+  if(!grunt.file.exists(vendor + '/bootstrap/bower.json')) {
     grunt.fail.fatal('>> Please run "bower install" before continuing.');
   }
 
@@ -25,6 +25,7 @@ module.exports = function(grunt) {
 
     // Convenience
     bootstrap: '<%= vendor %>/bootstrap',
+    rrssb: '<%= vendor %>/RRSSB',
     theme: 'theme',
 
     // Run Bootstrap's own Gruntfile.
@@ -127,7 +128,9 @@ module.exports = function(grunt) {
           {expand: true, cwd: '<%= bootstrap %>/docs/_data', src: ['**'], dest: '<%= site.data %>/'},
           {expand: true, cwd: '<%= bootstrap %>/dist', src: ['**'], dest: '<%= site.assets %>/'},
           {expand: true, cwd: '<%= theme %>/img', src: ['**', '**/*.{jpg,png,gif}'], dest: '<%= site.assets %>/img/'},
-          {expand: true, cwd: '<%= site.theme %>/application.js', src: ['**'], dest: '<%= site.assets %>/js/'},
+          {expand: true, cwd: '<%= rrssb %>/css', src: ['**', '**/*'], dest: '<%= site.assets %>/rrssb/css'},
+          {expand: true, cwd: '<%= rrssb %>/js', src: ['**', '**/*'], dest: '<%= site.assets %>/rrssb/js'},
+          {expand: true, cwd: '<%= site.theme %>/application.js', src: ['**'], dest: '<%= site.assets %>/js/'}
         ]
       },
       update: {

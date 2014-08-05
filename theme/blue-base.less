@@ -7,14 +7,36 @@ body {
 	background: -ms-radial-gradient(center, ellipse cover,  #009cdf 0%,#15479e 100%); /* IE10+ */
 	background: radial-gradient(ellipse at center,  #009cdf 0%,#15479e 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009cdf', endColorstr='#15479e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-	.normal-font
+	.normal-font;
 }
 .illustration {
 	.col-sm-2, .col-sm-4, .col-sm-3, .col-sm-2,
 	.col-xs-2, .col-xs-4, .col-xs-3, .col-xs-2 {
-		p {
-			text-align: center;
+		text-align: center;
+		p.description-pad-right {
+			
 			padding: 1em 25% 1em 2%;
 		}
+
+		.fa {
+			font-size: 160px;
+		}
+
+		@media (max-width: 767px) {
+			h3 { font-size: 18px; }
+			.fa {
+				font-size: 120px;
+			}
+		}
+
+		@media (max-width: 500px) {
+			.fa {
+				font-size: 80px;
+			}
+		}
 	}
+}
+
+footer {
+	margin-bottom: 3em;
 }
