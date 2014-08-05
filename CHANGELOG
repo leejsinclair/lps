@@ -1,0 +1,14 @@
+v0.2.6:
+  date: 2013-12-22
+  changes:
+    - Updated dependencies and Bootstrap paths.
+    - A number of updates to gruntfile and config.
+    - Adds _config.yml to project root to make project metadata more customizable from the start.
+v0.2.0:
+  date: 2013-08-03
+  changes:
+    - Refactored to build Bootstrap without having to manually edit the templates.
+v0.1.0:
+  date: 2013-07-16
+  changes:
+    - First commit.

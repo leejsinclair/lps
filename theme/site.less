@@ -1,0 +1,91 @@
+//
+// Site
+// --------------------------------------------------
+
+// Theme
+// -------------------------------
+@import "variables.less";
+
+@space: 20px;
+
+
+// Vendor
+// -------------------------------
+
+// Bootstrap's styles
+@import "mixins.less";
+@import "bootstrap.less";
+
+.highlight-font { font-family: 'Playball', cursive };
+.normal-font { font-family: 'Ubuntu', sans-serif; }
+
+
+// Components
+// -------------------------------
+
+/*@import "foo.less";*/
+
+
+// Site-overrides
+// -------------------------------
+
+// Override Bootstrap
+pre {
+  background: #F8F8FF;
+}
+
+body, html {
+	height: 100%;
+}
+
+.top-pad {
+	margin-top: @space;
+}
+
+.bs-masthead {
+	padding: 3em 0 0 0;
+	h1 {
+		.highlight-font;
+		font-size: 60px;
+		padding: 0px 0 30px 120px;
+	}
+
+	p {
+		padding-left: 120px;
+		margin-top: -40px;
+	}
+}
+
+.main .lead {
+	font-size: 1.2em;
+}
+
+.illustration {
+	margin:0;
+	padding: @space 0;
+	.col-sm-2, .col-sm-4, .col-sm-3, .col-sm-2,
+	.col-xs-2, .col-xs-4, .col-xs-3, .col-xs-2 {
+		margin:0;
+		padding: 0;
+		img {
+			width: 100%;
+		}
+		p {
+			text-align: center;
+			padding: 1em 10%;
+		}
+	}
+}
+
+.description {
+	margin-bottom: @space;
+	p {
+		font-size: 1.1em;
+	}
+}
+
+@import "blue-base.less";
+@import "package-monkey.less";
+
+// Utilities must be last
+@import "utilities.less";

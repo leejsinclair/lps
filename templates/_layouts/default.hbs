@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    {{> header }}
+  </head>
+  <body class="bs-docs-home">
+    <!-- Page content of course! -->
+    {{> body }}
+
+    <footer class="container" role="contentinfo">
+      {{> social-buttons }}
+
+      <ul class="bs-masthead-links">
+        <li class="current-version">
+          Version {{ current_version }}
+        </li>
+      </ul>
+    </footer>
+
+    <!-- JS and analytics only. -->
+    {{> footer }}
+
+  </body>
+</html>
