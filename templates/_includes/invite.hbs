@@ -1,13 +1,44 @@
 <div class="row top-pad invite">
 	<div class="col-xs-12">
-		<p>Limited positions available.</p>
+		<p>Limited availability - register now!</p>
 	</div>
 </div>
 <div class="row invite">
-	<div class="com-md-9 col-xs-8">
-		<input type="email" class="form-control" placeholder="Email address" />
+	<div class="col-md-9 col-xs-8">
+		<input type="email" class="form-control" placeholder="Email address" id="emailAddress" />
+		<div class="alert alert-danger" role="alert" id="invalid" style="display:none">Oh now, it looks like your email address is not quite right.</div>
+  		<div class="alert alert-success" role="alert" id="success" style="display:none">Thanks.</div>
 	</div>
 	<div class="col-md-3 col-xs-4">
-		<button type="button" class="btn btn-primary btn-block">Request invite</button>
+		<button type="button" class="btn btn-primary btn-block" onclick="requestEmail( '#emailAddress', '#invalid', '#success' )">Request invite</button>
 	</div>
 </div>
+
+<script>
+function requestEmail( addressNodeId, errorNodeId, successNodeId ){
+	var token = '0963b0eb-2b90-44b2-8c8f-470646d1fda8';
+	var emailAddress = $(addressNodeId).val();
+	var valid = emailAddress.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/);
+
+	if(!valid) {
+		$(errorNodeId).css('display','block');
+		return;
+	}
+	$(errorNodeId).css('display','none');
+	$.ajax({
+	  'type': "POST",
+	  'url': 'https://fwdform.herokuapp.com/user/' + token,
+	  'data': {
+	  	'email': emailAddress,
+	  	'name': 'Potential customer: {{title}}',
+	  	'message': 'I would like an invitation to {{title}}. ' + emailAddress
+	  },
+	  'success': function(res) {
+	  	$(successNodeId).css('display','block');
+	  },
+	  'error': function(res) {
+	  	$(successNodeId).css('display','block');
+	  }
+	});
+}
+</script>
