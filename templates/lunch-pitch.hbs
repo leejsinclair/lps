@@ -1,16 +1,17 @@
 ---
 layout: default.hbs
-title: LunchPitch
+title: Lunch Pitch
 slug: lunch-pitch
-description: Large to small business start up help is only a click away Small business start up help from top entrepreneurship experts saves you time and money now, and helps drive your future success.
+description: Large to small business start up help is only a click away. Small business start up help from top entrepreneurship experts saves you time and money now, and helps drive your future success.
 favicon: http://faviconist.com/icons/5f5086de66d2983608260d7338c48ffa/favicon.ico
 base_url: "./"
 current_version: beta
+css_theme: grey
 ---
 
 <main class="bs-masthead" id="content" role="main">
   <div class="container">
-    <h1 class="header lunch-pitch">Lunch Pitch</h1>
+    <h1 class="header lunch-pitch">{{ title }}</h1>
     <p class="lead">Validate Your Business Ideas</p>
   </div>
 </main>
@@ -19,11 +20,33 @@ current_version: beta
 		<div class="row">
 			<div class="col-sm-12">
 				<p class="lead">Get valuable small business start up advice and feedback from experts in the right industry.</p>
-				<p>Develop a service or product launch with confidence. Get important business tips to save you time, money, and stress.</p>
 			</div>
 		</div>
 
-		<div class="row top-pad illustration">
+		<div class="row top-pad">
+			<div class="col-xs-12 text-center">
+				<!--Change wideo width and height here-->
+					<div id="wideo-embed-block" 
+						wideo-width="1000" 
+						wideo-height="569"
+						wideo-id="4691981409189745886"
+						autoplay="true">
+					</div>
+					<script type="text/javascript">(function(){var x=document.createElement('script'), s=document.getElementsByTagName('script')[0];x.async=true;x.src='http://static.wideo.co/js/embed/wideoembed.js';s.parentNode.insertBefore(x,s)})();</script>
+			</div>
+		</div>
+
+		{{> invite}}
+
+		<div class="row">
+			<div class="col-sm-12">
+				<p>&nbsp;</p>
+				<p>Develop a service or product launch with confidence. Get important business tips to save you time, money, and stress.</p>
+				<p>&nbsp;</p>
+			</div>
+		</div>
+
+		<div class="row top-pad illustration dark">
 			<div class="col-xs-4">
 				<h3>An idea</h3>
 			</div>
@@ -34,7 +57,7 @@ current_version: beta
 				<h3>Get feedback</h3>
 			</div>
 		</div>
-		<div class="row top-pad illustration">
+		<div class="row top-pad illustration dark">
 			<div class="col-xs-4">
 				<i class="fa fa-lightbulb-o"></i>
 
@@ -52,8 +75,7 @@ current_version: beta
 			</div>
 		</div>
 
-		{{> invite}}
-
+		<!--
 		<div class="row quote top-pad">
 			<div class=" col-md-2 col-xs-3">
 				<img src="http://api.randomuser.me/portraits/med/men/98.jpg">
@@ -65,6 +87,7 @@ current_version: beta
 				</blockquote>
 			</div>
 		</div>
+		//-->
 
 		<div class="row description top-pad">
 			<div class="col-sm-6">
@@ -73,7 +96,7 @@ current_version: beta
 			</div>
 			<div class="col-sm-6">
 				<h2>Crowd of everyday people</h2>
-				<p>Quality feedback from your market can help you refine your idea, tweak it and pivot your startup idea. Only feedback from yout targeted market can tell you how your product/service would work for them.</p>
+				<p>Quality feedback from your market can help you refine your idea, tweak it and pivot your startup idea. Only feedback from your targeted market can tell you how your product/service would work for them.</p>
 			</div>
 		</div>
 
@@ -88,7 +111,7 @@ current_version: beta
 			</div>
 		</div>
 
-		<div class="row description top-pad">
+		<div class="row description top-pad dark">
 			<div class="col-sm-6">
 				<h2>Lunch Pitch Advantages</h2>
 				<ul>

@@ -108,8 +108,16 @@ module.exports = function(grunt) {
         ],
       },
       site: {
-        src: ['<%= site.theme %>/site.less'],
-        dest: '<%= site.assets %>/css/site.css'
+        src: ['<%= site.theme %>/blue.less'],
+        dest: '<%= site.assets %>/css/blue.css'
+      },
+      grey: {
+        src: ['<%= site.theme %>/grey.less'],
+        dest: '<%= site.assets %>/css/grey.css'
+      },
+      purple: {
+        src: ['<%= site.theme %>/purple.less'],
+        dest: '<%= site.assets %>/css/purple.css'
       }
     },
 

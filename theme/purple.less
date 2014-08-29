@@ -1,0 +1,148 @@
+//
+// Site
+// --------------------------------------------------
+
+// Theme
+// -------------------------------
+@import "purple-variables.less";
+
+
+// Vendor
+// -------------------------------
+
+// Bootstrap's styles
+@import "mixins.less";
+@import "bootstrap.less";
+
+
+
+// Components
+// -------------------------------
+
+/*@import "foo.less";*/
+
+
+
+
+// Site-overrides
+// -------------------------------
+
+// Override Bootstrap in favor of GitHub styles
+pre {
+  background: #F8F8FF;
+}
+
+.masthead {
+	position: relative;
+	padding: 55px 0 30px 0;
+	color: #cdbfe3;
+	text-align: center;
+	text-shadow: 0 1px 0 rgba(0,0,0,.1);
+	background: #433154; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #433154 0%, #362641 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#433154), color-stop(100%,#362641)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #433154 0%,#362641 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #433154 0%,#362641 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #433154 0%,#362641 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #433154 0%,#362641 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#433154', endColorstr='#362641',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	margin-bottom: 30px;
+	min-height: 820px;
+	h1 {
+		font-size: 5em;
+		text-align: left;
+	}
+	h2 {
+		font-size: 2.2em;
+	}
+	.diagram {
+		margin-top: 130px;
+		.phone-container {
+			margin-top: 3em;
+		}
+		@media (max-width: 767px) {
+			.phone-container {
+				margin-top: 6em;
+			}
+		}
+		.col-xs-3 {
+			height: 239px;
+		}
+	}
+
+	.col-xs-3 {
+		width: 20%;
+		margin-right: 5%;
+	}
+
+	.arrows {
+		position: relative;
+		top: 74px;
+	}
+	
+	.background img {
+		width: 50%;
+	}
+	.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+		padding: 0;
+	}
+
+	
+}
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+	img { max-width: 100%; }
+}
+
+.hero {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: #3d2d4a;
+	height: 7em;
+	padding: 2em 0;
+}
+
+.absolute-center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.navbar-brand, .lobster {
+	font-family: 'Lobster Two', cursive;
+}
+
+.ubuntu {
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.square {
+	width: 181px;
+	height: 239px;
+}
+
+.background {
+	h1,h2,h3 { text-align: center; color: #FFF; }
+	color: #FFF;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.background.purple {
+	background-color: @purple;
+}
+
+.background.green {
+	background-color: @green;
+}
+
+.background.red {
+	background-color: @red;
+}
+
+.tpad {
+	padding-top: 2em;
+}
+
+// Utilities must be last
+@import "utilities.less";
